@@ -135,3 +135,14 @@ dien_tich, chu_vi = tinh_dien_tich_va_chu_vi_hinh_chu_nhat(5)
 print("Diện tích của hình vuông là:", dien_tich)
 print("Chu vi của hình vuông là:", chu_vi)
 
+# Hàm có thể có tham số tùy chọn và trả về nhiều giá trị
+def tinh_dien_tich_va_chu_vi_hinh_chu_nhat(chieu_dai, chieu_rong=None):
+    """Hàm này trả về diện tích và chu vi của hình chữ nhật hoặc hình vuông."""
+    if chieu_rong is None:
+        chieu_rong = chieu_dai  # Nếu không cung cấp chiều rộng, coi như là hình vuông
+    dien_tich = chieu_dai * chieu_rong
+    chu_vi = 2 * (chieu_dai + chieu_rong)
+    return dien_tich, chu_vi
+# Gọi hàm và lưu giá trị trả về
+dien_tich, chu_vi = tinh_dien_tich_va_chu_vi_hinh_chu_nhat(5, 3)
+print("Diện tích của hình chữ nhật là:", dien_tich)
